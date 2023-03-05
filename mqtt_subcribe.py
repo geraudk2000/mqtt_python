@@ -5,7 +5,7 @@ from paho.mqtt import client as mqtt_client
 from mqtt_database import insert_data
 
 
-broker = 'm6bd9a27-internet-facing-ed79c3f7c10db932.elb.us-east-1.amazonaws.com'
+broker = os.environ.get('BROKER_URL')
 #Authentication to the broker 
 broker_username = os.environ.get('BROKER_USERNAME')
 broker_password = os.environ.get('BROKER_PASSWORD')
